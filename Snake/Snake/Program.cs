@@ -17,10 +17,15 @@ namespace Snake
             p1.x = 1;
             p1.y = 2;
             p1.sym = '*';
-            p1.Draw();
+            p1.Drow();
 
             Point p2 = new Point(5, 5, '#');
-            p2.Draw();
+            p2.Drow();
+
+            HorisontalLine line = new HorisontalLine(5, 10, 8, '+' );
+            line.Drow();
+            WerticalLine line1 = new WerticalLine(5, 0, 8, '-');
+            line1.Drow();
             
             Console.ReadLine();
         }
