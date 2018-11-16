@@ -10,6 +10,10 @@ namespace Snake
     {
         static void Main(string[] args)
         {
+            Console.SetWindowSize(1, 1);
+            Console.SetBufferSize(80, 25);
+            Console.SetWindowSize(80, 25);
+
             int x1 = 1;
             int y1 = 2;
             char sym1 = '*';
@@ -22,10 +26,14 @@ namespace Snake
             Point p2 = new Point(5, 5, '#');
             p2.Drow();
 
-            HorisontalLine line = new HorisontalLine(5, 10, 8, '+' );
-            line.Drow();
-            WerticalLine line1 = new WerticalLine(5, 0, 8, '-');
-            line1.Drow();
+            HorisontalLine upline = new HorisontalLine(0, 78, 0, '+' );
+            HorisontalLine downline = new HorisontalLine(0, 78, 24, '+');
+            upline.Drow();
+            downline.Drow();
+            VerticalLine leftline = new VerticalLine(0, 24, 0, '-');
+            VerticalLine rightline = new VerticalLine(0, 24, 78, '-');
+            leftline.Drow();
+            rightline.Drow();
             
             Console.ReadLine();
         }
