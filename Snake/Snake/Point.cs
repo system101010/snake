@@ -27,7 +27,7 @@ namespace Snake
 
         public Point(Point p)
         {
-            x = p.y;
+            x = p.x;
             y = p.y;
             sym = p.sym;
         }
@@ -46,6 +46,11 @@ namespace Snake
             Console.Write(sym);
         }
 
+        public void Clear()
+        {
+            sym = ' ';
+            Drow();
+        }
         public override string ToString()
         {
             return x + ", " + y + ", " + sym;
